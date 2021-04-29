@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<title>Poster Shop</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<script src="formChecker.js"></script>
+
+	<h1>Welcome to the Poster Shop!</h1>
+
+	<form name="Form" action="customerBackend.php" method="post">
+		<b>Please enter your credentials:</b><br>
+		Username: <input type="email" id="username" name="username" required><br>
+		Password: <input type="password" id="password" name="password" required><br><br>
+
+		<b>Store:<br></b>
+		Small Poster ($5) <input type="number" value="0" id="number" name="small" min="0" onchange="cost()"><br>
+		Medium Poster ($10) <input type="number" value="0" id="number" name="medium" min="0" onchange="cost()"><br>
+		Large Poster ($15) <input type="number" value="0" id="number" name="large" min="0" onchange="cost()"><br><br>
+
+		<b>Please choose your method of Shipping:<br></b>
+		<input type="radio" value="free" name="shipping" checked id="free" required onchange="shipping(); cost()">
+		<label for="free">Free 7 day Shipping</label><br>
+		<input type="radio" value="overNight" name="shipping" id="overNight" onchange="shipping(); cost()">
+		<label for="overNight">$50.00 Overnight Shipping</label><br>
+		<input type="radio" value="threeDay" name="shipping" id="threeDay" onchange="shipping(); cost()">
+		<label for="threeDay">$5.00 Three Day Shipping</label><br><br>
+
+		<button type="submit" onClick="return validateForm()">Submit Order</button><br>
+		<button onClick="reset()">Reset Order</button><br><br>
+	</form>
+
+</body>
+
+</html>

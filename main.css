@@ -1,0 +1,25 @@
+body {
+    background-color: #24586d;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: small;
+    margin: 0px;
+}
+
+div {
+    background-color: #adadad;
+    margin: 20px 40px ;    
+    padding: 10px 00px 50px 40px;
+}
+
+p {
+    font-size: medium;
+}
+
+a {
+    color:#24586d;
+}
+
+a:hover {
+    color:aqua
+}
+
